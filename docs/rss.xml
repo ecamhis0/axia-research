@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Axia Research</title>
+  <link>https://axiaresearch.com</link>
+  <description>Axia Research is a running record of investment theses, quick reactions to market moves, and portfolio updates — written in public, in real time.</description>
+  <item>
+    <title>First Read on the Latest CPI Print</title>
+    <link>https://axiaresearch.com/quick-takes/sample-quick-take/</link>
+    <guid>https://axiaresearch.com/quick-takes/sample-quick-take/</guid>
+    <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    <description>A short, same-day reaction — this is the kind of quick, timely note that belongs in this section.</description>
+  </item>
+  <item>
+    <title>Why Dislocated Sectors Are the Best Hunting Ground</title>
+    <link>https://axiaresearch.com/theses/sample-thesis/</link>
+    <guid>https://axiaresearch.com/theses/sample-thesis/</guid>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <description>A framework for finding margin of safety in sectors the market has temporarily given up on — and a worked example.</description>
+  </item>
+  <item>
+    <title>Trimming Into Strength, Adding One New Position</title>
+    <link>https://axiaresearch.com/portfolio-updates/sample-portfolio-update/</link>
+    <guid>https://axiaresearch.com/portfolio-updates/sample-portfolio-update/</guid>
+    <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+    <description>An example of how position changes and sizing get logged here — replace with your actual activity.</description>
+  </item>
+</channel>
+</rss>
