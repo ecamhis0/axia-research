@@ -1,4 +1,4 @@
-# Deploying Axia Research to axiaresearch.com
+# Deploying Axia Research to axia-research.com
 
 This site has no build step and no dependencies — `docs/` is the finished
 site, ready to serve as-is. That makes GitHub Pages the simplest host: push
@@ -8,7 +8,7 @@ or a folder literally named `docs` — nothing else is selectable.)
 
 ## 1. Register the domain
 
-Buy `axiaresearch.com` at a registrar. Recommended, since both sell at (or
+Buy `axia-research.com` at a registrar. Recommended, since both sell at (or
 close to) cost with no renewal markup:
 
 - Cloudflare Registrar — https://www.cloudflare.com/products/registrar/ (~$10-11/yr)
@@ -44,11 +44,11 @@ git push -u origin main
 
 ## 4. Point the domain at GitHub Pages
 
-The `docs/CNAME` file already contains `axiaresearch.com`, which tells
+The `docs/CNAME` file already contains `axia-research.com`, which tells
 GitHub Pages which custom domain to expect — you don't need to re-add it,
 but you do need to point DNS at GitHub:
 
-At your registrar's DNS settings for axiaresearch.com, add:
+At your registrar's DNS settings for axia-research.com, add:
 
 - Four **A** records for the root domain (`@`), pointing to GitHub Pages' IPs:
   - 185.199.108.153
@@ -57,7 +57,7 @@ At your registrar's DNS settings for axiaresearch.com, add:
   - 185.199.111.153
 - One **CNAME** record for `www`, pointing to `<your-username>.github.io`
 
-Back in **Settings → Pages** on GitHub, enter `axiaresearch.com` as the
+Back in **Settings → Pages** on GitHub, enter `axia-research.com` as the
 custom domain and wait for DNS to verify (can take a few minutes to a few
 hours). Once verified, check "Enforce HTTPS."
 

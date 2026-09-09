@@ -31,7 +31,7 @@ ASSETS = os.path.join(ROOT, "assets")
 SITE = {
     "name": "Axia Research",
     "tagline": "Notes on value, dislocation, and mean reversion",
-    "domain": "https://axiaresearch.com",
+    "domain": "https://axia-research.com",
     "author": "Eric Camhis",
     "description": (
         "Axia Research is a running record of investment theses, quick "
@@ -369,7 +369,7 @@ def copy_static():
     with open(os.path.join(DIST, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE['domain']}/sitemap.xml\n")
     with open(os.path.join(DIST, "CNAME"), "w") as f:
-        f.write("axiaresearch.com\n")
+        f.write("axia-research.com\n")
 
 
 def main():
