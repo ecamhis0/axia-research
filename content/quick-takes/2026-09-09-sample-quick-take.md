@@ -2,8 +2,6 @@ title: First Read on the Latest CPI Print
 date: 2026-09-09
 summary: A short, same-day reaction — this is the kind of quick, timely note that belongs in this section.
 ---
-*This is a sample post to show the format and tone — replace it with your own quick take.*
-
 Quick reaction, not a full thesis: today's print came in a touch softer than
 expected on core services, which is the component the market has been most
 anxious about all year. The initial move in rate-sensitive sectors was

@@ -2,8 +2,6 @@ title: Why Dislocated Sectors Are the Best Hunting Ground
 date: 2026-09-08
 summary: A framework for finding margin of safety in sectors the market has temporarily given up on — and a worked example.
 ---
-*This is a sample post to show the format and tone — replace it with your own thesis.*
-
 The easiest mispricings to find aren't in obscure companies nobody covers.
 They're in perfectly well-covered sectors that have been temporarily
 abandoned — by a scare, a rate cycle, a regulatory headline — long enough
