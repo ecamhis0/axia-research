@@ -77,6 +77,46 @@ def inline(text):
     return text
 
 
+def md_table(block):
+    """Render a GitHub-style pipe table: header row, |---|---| rule, data rows."""
+    lines = [l for l in block.split("\n") if l.strip()]
+
+    def split_row(line):
+        line = line.strip()
+        if line.startswith("|"):
+            line = line[1:]
+        if line.endswith("|"):
+            line = line[:-1]
+        return [c.strip() for c in line.split("|")]
+
+    header = split_row(lines[0])
+    aligns = []
+    for a in split_row(lines[1]):
+        if a.startswith(":") and a.endswith(":"):
+            aligns.append("center")
+        elif a.endswith(":"):
+            aligns.append("right")
+        elif a.startswith(":"):
+            aligns.append("left")
+        else:
+            aligns.append(None)
+
+    def style(i):
+        al = aligns[i] if i < len(aligns) else None
+        return f' style="text-align:{al}"' if al else ""
+
+    thead = "<tr>" + "".join(f"<th{style(i)}>{inline(c)}</th>" for i, c in enumerate(header)) + "</tr>"
+    body_rows = []
+    for line in lines[2:]:
+        cells = split_row(line)
+        body_rows.append("<tr>" + "".join(f"<td{style(i)}>{inline(c)}</td>" for i, c in enumerate(cells)) + "</tr>")
+    return f'<div class="table-wrap"><table><thead>{thead}</thead><tbody>{"".join(body_rows)}</tbody></table></div>'
+
+
+IMG_BLOCK_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
+TABLE_RULE_RE = re.compile(r"^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$")
+
+
 def md_to_html(body):
     blocks = re.split(r"\n\s*\n", body.strip())
     out = []
@@ -84,6 +124,8 @@ def md_to_html(body):
         block = block.strip("\n")
         if not block.strip():
             continue
+        lines0 = block.split("\n")
+        img_match = IMG_BLOCK_RE.match(lines0[0].strip())
         if block.strip() == "---":
             out.append("<hr>")
         elif block.startswith("### "):
@@ -103,6 +145,16 @@ def md_to_html(body):
                     items[-1] += " " + stripped
             lis = "\n".join(f"  <li>{inline(i)}</li>" for i in items)
             out.append(f"<ul>\n{lis}\n</ul>")
+        elif img_match:
+            alt, srcpath = img_match.group(1), img_match.group(2)
+            caption = " ".join(l.strip() for l in lines0[1:] if l.strip())
+            fig = f'<figure class="post-figure"><img src="{htmllib.escape(srcpath)}" alt="{htmllib.escape(alt)}" loading="lazy">'
+            if caption:
+                fig += f"<figcaption>{inline(caption)}</figcaption>"
+            fig += "</figure>"
+            out.append(fig)
+        elif block.lstrip().startswith("|") and len(lines0) >= 2 and TABLE_RULE_RE.match(lines0[1].strip()):
+            out.append(md_table(block))
         else:
             paragraph = " ".join(l.strip() for l in block.split("\n"))
             out.append(f"<p>{inline(paragraph)}</p>")
@@ -363,9 +415,7 @@ def build_sitemap(all_posts):
 def copy_static():
     if os.path.exists(DIST):
         shutil.rmtree(DIST)
-    os.makedirs(DIST, exist_ok=True)
-    for fname in os.listdir(ASSETS):
-        shutil.copy(os.path.join(ASSETS, fname), os.path.join(DIST, fname))
+    shutil.copytree(ASSETS, DIST)
     with open(os.path.join(DIST, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE['domain']}/sitemap.xml\n")
     with open(os.path.join(DIST, "CNAME"), "w") as f:
