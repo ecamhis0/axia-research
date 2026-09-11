@@ -34,9 +34,3 @@ That's the pattern to look for: price moving on group-level fear, value
 holding steady at the company level. The thesis isn't "this sector is cheap."
 It's "this specific business survives the trough, and the reason it's priced
 like it might not is wrong."
-
-## Where this one stands today
-
-This is the placeholder for your actual position: what you own, at what cost
-basis, what would change your mind, and what you're watching for as the
-catalyst plays out.
