@@ -1,0 +1,86 @@
+title: PayPal Is Priced for a Permanent Decline, and You Couldn't Give the Stock Away at $40 a Share... Why Does That Work in Our Favor?
+date: 2026-09-12
+summary: A deep-value case that PayPal's "left for dead" narrative is overstated, its fastest-growing businesses are hidden inside a single-digit-to-low-double-digit multiple, and a buyback alone can nearly double EPS within a few years — with real external validation from a $53 billion buyout offer the board turned down.
+---
+PayPal has had one hell of a downfall, falling from grace and dropping from $308 in July 2021 all the way down to $39. Of course, the market isn't completely irrational, and there are multiple reasons behind this decline. To list a few, PayPal has faced significant competition from Apple Pay and Google Pay, losing market share and facing contracting margins. PayPal's leadership was also lacking under Alex Chriss, who spent roughly two and a half years running the company with no significant value-added changes or real initiatives. The board finally got impatient and replaced him with Enrique Lores in February 2026, and the stock cratered further on the news, down to its trough near $39.
+
+Here at Axia Research, we understand that entry price is of the utmost importance. You can buy an amazing company at a horrible price and underperform the market even though the company is changing the world. We prefer to buy good businesses at great prices, and we believe PayPal is just that. We are not delusional about the company, but we do believe it offers a significant margin of safety at its current price. Luckily, we are not alone in believing this. In July 2026, Stripe and Advent International offered to buy out PayPal's shareholders at $60.50 a share — a valuation north of $53 billion, paying a premium of roughly 28% to its market price. The deal would have been backed by approximately $50 billion in secured bank financing to buy the company outright. This is significant, because it means the lender believed PayPal's cash flow was secure enough to take on that risk. The board let the talks stall over price, and by late August the deal was dead. We believe that was the right call, because over the next 3-5 years we have a price target well above $60.50 per share. But let's go over our thesis.
+
+1) Reports of PayPal's death are greatly exaggerated. This is not a dying business.
+2) Although branded checkout is roughly flat, Venmo and Buy Now Pay Later are growing at double digits, while the stock recently traded for a mid-to-high single-digit earnings multiple.
+3) PayPal has a free cash flow yield of 13-17%, and management has guided nearly all of that toward share buybacks.
+4) PayPal's new advertising business is being built by someone who has built exactly this kind of business before.
+5) The incentive structure lines up directly with our own, and it's already been validated once, at HP.
+
+## Pillar 1: The margin story is real, but it isn't a death spiral
+
+PayPal's consolidated transaction margin — the profitability of the actual payments flowing across its entire network, measured as a share of total payment volume — has dropped significantly since 2015. Here's the actual math, pulled straight from PayPal's own earnings releases, so you can check it yourself.
+
+**FY2015:**
+- Total net revenues: $9,248M
+- Transaction expense: $2,610M
+- Transaction and loan losses: $809M
+- Total Payment Volume: ~$281.8B
+
+Margin dollars: $9,248M − $2,610M − $809M = $5,829M. As a share of TPV: **2.07%**.
+
+**FY2024:**
+- Total net revenues: $31,797M
+- Transaction expense: $15,697M
+- Transaction and credit losses: $1,442M
+- Total Payment Volume: $1,681,150M
+
+Margin dollars: $31,797M − $15,697M − $1,442M = $14,658M. As a share of TPV: **0.87%**.
+
+**FY2025:**
+- Total net revenues: $33,172M
+- Transaction expense: $15,987M
+- Transaction and credit losses: $1,720M
+- Total Payment Volume: $1,793,979M ($1.79 trillion)
+
+Margin dollars: $33,172M − $15,987M − $1,720M = $15,465M. As a share of TPV: **0.86%**.
+
+That 2.07%-to-0.86% collapse is the number every bear points to as proof the moat is gone. We don't share that read, for a few reasons. First and most important: the margin held essentially flat from 2024 to 2025, dropping only from 0.87% to 0.86% — a sign the compression has stabilized rather than continuing to erode. Second, a meaningful chunk of the drop is explained by a rising mix of lower-margin volume from Braintree, the unbranded processing business PayPal acquired back in 2013. Braintree's take rate is estimated at under 2%, well below branded checkout, and PayPal spent several years cutting price aggressively there to win share — the single biggest reason margins fell as fast as they did. That was a choice, not a symptom of decay. Braintree's volume has since accelerated faster than branded checkout, growing at a mid-teens rate, with management now describing it as a "profitable front book" rather than a loss leader. And Braintree gives PayPal shareholders a slice of other well-known, growing platforms — its confirmed relationships include Uber and Ticketmaster, among others — so as those platforms grow, that growth flows straight through to our financial statements at close to zero incremental sales cost. The margin drag was real and significant. It was also mostly self-inflicted on purpose, and it has started to unwind, with margins stabilizing and positioned to reaccelerate as Buy Now Pay Later and Venmo keep growing. That brings us to the next point.
+
+## Pillar 2: Two double-digit growers hiding inside a single-digit multiple
+
+PayPal has two segments that have grown at double digits for multiple quarters running. Venmo's total payment volume grew 14% year over year to $94 billion. Customers who hold both a Venmo debit card and use "Pay with Venmo" generate 9x the revenue of a plain peer-to-peer user — proof the monetization flywheel is actually turning. On top of that, Buy Now, Pay Later volume inside branded checkout grew 26% year over year, with management stating that financial-services products like BNPL now make up roughly 20% of transaction margin dollars. If these segments keep growing faster than the company overall, we should expect the blended margin to reaccelerate.
+
+At its trough, PayPal was trading at less than 8x earnings — more than 75% below its 10-year average multiple, which sits in the high 20s. Peers in the sector like Block, which runs a similar consumer-wallet-and-merchant-processing model, trade meaningfully higher, at roughly 17x forward earnings. Fiserv and Global Payments currently trade even cheaper than PayPal on a forward basis, but both are working through their own company-specific overhangs, so that isn't evidence of PayPal's fair multiple — it's evidence that cheap payments stocks are having a moment for reasons specific to each name. PayPal has also historically traded alongside consumer sentiment, which sits near some of its lowest levels of the past decade. Once sentiment normalizes — and it eventually does — the financial-services sector tends to catch a real tailwind, and we'd expect PayPal to move with it. To be clear, our point isn't that PayPal deserves to trade like Mastercard or Visa at 25-31x forward earnings. It's that the current multiple sits well below any reasonable estimate of fair value, even if we can't pin that fair value down to the decimal. Worst case, the company can spin out or sell Venmo at a much higher multiple than the market is currently crediting it, realizing a gain that would be a meaningful share of today's entire market cap.
+
+## Pillar 3: A double-digit free cash flow yield funding a buyback that can halve the float
+
+PayPal is currently generating between $6-6.6 billion of free cash flow a year against a market cap that fell as low as roughly $35-40 billion at the February trough — a free cash flow yield that touched 17%. Management has guided to putting nearly all of that FCF toward buybacks in 2026. Let's be conservative: use the low end of the FCF range, and a share price meaningfully higher than where the stock has traded, at $65. Run that forward, and the compounding is easy to see. Within about four years, PayPal will have retired close to half its float, and EPS will be up roughly 75%, on the buyback alone.
+
+| Year | Cumulative Shares Repurchased (M) | Shares Outstanding (M) | % of Float Remaining | Diluted EPS | % Increase in EPS |
+|---|---|---|---|---|---|
+| 0 (today) | 0.0 | 855.5 | 100.0% | $6.12 | — |
+| 1 | 92.3 | 763.2 | 89.2% | $6.86 | +12.1% |
+| 2 | 184.6 | 670.9 | 78.4% | $7.80 | +27.5% |
+| 3 | 276.9 | 578.6 | 67.6% | $9.04 | +47.8% |
+| 4 | 369.2 | 486.3 | 56.8% | $10.76 | +75.9% |
+| 5 | 461.5 | 394.0 | 46.0% | $13.28 | +117.1% |
+
+This simple exercise places zero trust in management to achieve any of the things it has laid out, from the announced cost savings to the still-unproven ad business. All it requires is for EPS to stay roughly flat — not even accounting for inflation. Layer in even partial multiple normalization toward the historical average, and our price target is comfortably north of $100 per share. Layer in management being even modestly successful at turning the ship around, and we're looking at a 3-4 bagger over the next 3-5 years.
+
+## Pillar 4: An ad business built by someone who has done this before
+
+In May 2024, PayPal hired Mark Grether to build out PayPal Ads. Grether spent years in a senior role on Amazon's advertising business, joining via Amazon's 2019 acquisition of Sizmek, the ad-tech company he ran, before leaving in 2021 to build Uber's advertising business essentially from scratch — a business he said in 2023 was on track for roughly $1 billion in annual revenue. Ad businesses tend to carry some of the best margins in tech, and Amazon's is one of the highest-margin, most profitable segments inside that company. Now he has PayPal's data to work with, which is a different caliber of asset than either of his previous employers had: PayPal knows what you bought, when you bought it, how you paid for it, and even what color you bought it in. That is a dataset most ad businesses would have to buy from a third party, and at a fraction of the quality. We don't have an exact estimate for what PayPal Ads will generate, but we think it's fair — and conservative — to assume it eventually matches what Grether built at Uber. We'd rather underwrite the downside carefully and let the upside take care of itself.
+
+## Pillar 5: The incentives line up, and the playbook has already worked once
+
+Last, we've gotten more than one source of external validation for this thesis, and each one has increased our conviction. First: Enrique Lores ran HP, a slow-growth, low-multiple hardware business, from November 2019 until his appointment at PayPal. Under his tenure, HP's stock fell to a trough near $11 during the COVID crash and later reached roughly $39 — an increase of about 250% from trough to peak. Nothing about that turnaround was exciting; it was cost cuts, restructuring, and a buyback program he defended publicly through repeated bouts of market skepticism. That is close to line-for-line the playbook we're underwriting at PayPal, and it's already begun: PayPal has announced plans to cut roughly 20% of its global workforce over the next two to three years, with cuts already underway in several countries. That will create near-term turbulence and one-off restructuring charges, which we'd view as an opportunity to add to our position below cost basis if the market lets us.
+
+Show me the incentives, and I'll show you the outcome. Lores's PayPal pay package includes performance stock units that only pay out if the stock hits specific price hurdles over a multi-year period, with reporting indicating a $25 million payout if shares average around $68, and more than $60 million if they reach roughly $125. In other words, the person now running the company is paid seriously only if shares climb well above where they've traded for most of the past year — that's about as direct an alignment of incentives as this kind of thesis ever gets.
+
+## Base case
+
+Our base case assumes no multiple re-rating, no contribution from the ad business beyond what's already showing up in the numbers, and no acceleration in Venmo or BNPL beyond current trends. It rests entirely on the buyback management has already guided to, at a share price meaningfully higher than today's. Compounding the share count down and growing our slice of the pie without putting in another dollar of capital is exactly the kind of value creation we like best. That alone should get EPS to somewhere in the neighborhood of 75-100% higher within four to five years, which at today's depressed multiple should be worth roughly $80-90 per share.
+
+## Bull case
+
+If management's cost and efficiency program shows up in the numbers the way it did at HP, if Venmo and BNPL keep compounding, and if PayPal's ad business becomes even a fraction as significant as Uber's, there's a credible case for the multiple normalizing — or even fully re-rating. Even a partial move back toward the historical average of roughly 28x earnings, layered on top of the EPS growth from buybacks alone, gets us comfortably above $120 per share.
+
+All of this is still to be proven, but our conviction grows by the day. That's why PayPal is currently our largest position, at roughly 20% of the portfolio — usually the ceiling we set for any single holding, since there are always risks we don't yet know to look for. If Mr. Market gives us the opportunity, we'll consider either adding derivatives or simply increasing the position further. As always, we're sharing our own opinions and thesis here, and this is opinion, not advice. See you in the next one.
+
+*Data as of this post: figures above are drawn from PayPal's FY2015, FY2024, and FY2025 earnings releases, PayPal's SEC filings (including the 2026 CEO performance stock unit grant), and reporting from Reuters, Bloomberg, and other financial media on the February 2026 CEO transition and the July-August 2026 Stripe/Advent acquisition talks. Peer multiples (Block, Fiserv, Global Payments, Visa, Mastercard) are trailing/forward P/E as reported by StockAnalysis.com as of this writing. Entry price, cost basis, and position size are our own trade record.*
