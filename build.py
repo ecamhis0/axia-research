@@ -216,10 +216,15 @@ def fmt_date(date_str):
 # HTML shell
 # ---------------------------------------------------------------------------
 
-NAV_ITEMS = [("/", "Home")] + [(f"/{s['slug']}/", s["label"]) for s in SECTIONS] + [("/about/", "About")]
+NAV_ITEMS = ([("/", "Home")] + [(f"/{s['slug']}/", s["label"]) for s in SECTIONS]
+             + [("/screener/", "Screener"), ("/about/", "About")])
+
+# The Sector Dislocation Screener dashboard is produced by the separate Screener
+# project (Side Projects/Screener) and dropped here by its src/publish_site.py.
+SCREENER_FRAGMENT = os.path.join(CONTENT, "screener", "dashboard.html")
 
 
-def base(title, description, content_html, path="/", og_type="website"):
+def base(title, description, content_html, path="/", og_type="website", html_attrs="", extra_head=""):
     canonical = SITE["domain"] + path
     nav_html = "\n".join(
         f'<a href="{href}" class="nav-link{" nav-active" if href == path else ""}">{label}</a>'
@@ -227,7 +232,7 @@ def base(title, description, content_html, path="/", og_type="website"):
     )
     full_title = title if title == SITE["name"] else f"{title} — {SITE['name']}"
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en"{html_attrs}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -245,6 +250,7 @@ def base(title, description, content_html, path="/", og_type="website"):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+{extra_head}
 </head>
 <body>
 <div class="skip"><a href="#main">Skip to content</a></div>
@@ -364,6 +370,31 @@ def build_about():
     write("/about/index.html", base("About", meta.get("summary", SITE["description"]), content, path="/about/"))
 
 
+def build_screener():
+    """Wrap the screener dashboard (a self-contained HTML fragment: <style> + markup +
+    <script>) in the site's header/footer. Skipped if the fragment isn't there."""
+    if not os.path.exists(SCREENER_FRAGMENT):
+        return False
+    with open(SCREENER_FRAGMENT, encoding="utf-8") as f:
+        frag = f.read()
+    frag = re.sub(r"<title>.*?</title>", "", frag, count=1, flags=re.S)
+    # The dashboard has its own dark mode; the site is light-only, so pin it light
+    # (data-theme="light" on <html>) and let the site's cream background show through.
+    extra_head = """<style>
+  .screener-page { padding: 8px 0 48px; }
+  .screener-page .viz-root { background: transparent; }
+  .screener-page .viz-root h1 { font-family: var(--serif); color: var(--navy); }
+  @media (max-width: 640px) { .screener-page .viz-root { padding: 16px 16px 40px; } }
+</style>"""
+    content = f'<section class="screener-page">\n{frag}\n</section>'
+    write("/screener/index.html", base(
+        "Sector Dislocation Screener",
+        "Which S&P 500 sectors are dislocated vs. their own history, by index weight and by 3-year "
+        "performance, what happened after similar setups, and a quality screen of their largest holdings.",
+        content, path="/screener/", html_attrs=' data-theme="light"', extra_head=extra_head))
+    return True
+
+
 def build_404():
     content = """
 <section class="wrap post">
@@ -402,6 +433,8 @@ def build_rss(all_posts):
 
 def build_sitemap(all_posts):
     urls = ["/", "/about/"] + [f"/{s['slug']}/" for s in SECTIONS]
+    if os.path.exists(SCREENER_FRAGMENT):
+        urls.append("/screener/")
     urls += [f"/{p['section']}/{p['slug']}/" for p in all_posts]
     body = "\n".join(f"  <url><loc>{SITE['domain']}{u}</loc></url>" for u in urls)
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -434,10 +467,11 @@ def main():
     all_posts.sort(key=lambda p: p["date_obj"], reverse=True)
     build_home(all_posts)
     build_about()
+    has_screener = build_screener()
     build_404()
     build_rss(all_posts)
     build_sitemap(all_posts)
-    print(f"Built {len(all_posts)} posts into {DIST}")
+    print(f"Built {len(all_posts)} posts{' + screener' if has_screener else ''} into {DIST}")
 
 
 if __name__ == "__main__":
