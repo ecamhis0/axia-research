@@ -1,1 +1,5 @@
 Thesis/
+
+# never commit credentials
+GitHub Token*.txt
+.github_token
