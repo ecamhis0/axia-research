@@ -114,6 +114,34 @@ def md_table(block):
 
 
 IMG_BLOCK_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
+PDF_BLOCK_RE = re.compile(r'^\[\[pdf\s+(.*?)\]\]$', re.S)
+PDF_ATTR_RE = re.compile(r'(\w+)="([^"]*)"')
+
+
+def md_pdf(attr_str):
+    """[[pdf src="/files/x.pdf" title="..." id="anchor" pages="/a.png,/b.png"]]
+    Renders a download bar, an inline PDF viewer (desktop) and page images
+    (shown on phones, where inline PDF viewers are unreliable)."""
+    a = dict(PDF_ATTR_RE.findall(attr_str))
+    src = htmllib.escape(a.get("src", ""))
+    title = htmllib.escape(a.get("title", "Download PDF"))
+    anchor = f' id="{htmllib.escape(a["id"])}"' if a.get("id") else ""
+    fname = htmllib.escape(os.path.basename(a.get("src", "")))
+    pages = [p.strip() for p in a.get("pages", "").split(",") if p.strip()]
+    imgs = "".join(
+        f'<a href="{src}"><img src="{htmllib.escape(p)}" alt="{title}, page {i}" loading="lazy"></a>'
+        for i, p in enumerate(pages, 1)
+    )
+    return f"""<section class="pdf-embed"{anchor}>
+  <div class="pdf-bar">
+    <span class="pdf-title">{title}</span>
+    <span class="pdf-actions"><a class="btn" href="{src}" target="_blank" rel="noopener">Open</a> <a class="btn btn-solid" href="{src}" download="{fname}">Download PDF</a></span>
+  </div>
+  <iframe class="pdf-frame" src="{src}#view=FitH" title="{title}" loading="lazy"></iframe>
+  {f'<div class="pdf-pages">{imgs}</div>' if imgs else ''}
+</section>"""
+
+
 TABLE_RULE_RE = re.compile(r"^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$")
 
 
@@ -126,7 +154,10 @@ def md_to_html(body):
             continue
         lines0 = block.split("\n")
         img_match = IMG_BLOCK_RE.match(lines0[0].strip())
-        if block.strip() == "---":
+        pdf_match = PDF_BLOCK_RE.match(block.strip())
+        if pdf_match:
+            out.append(md_pdf(pdf_match.group(1)))
+        elif block.strip() == "---":
             out.append("<hr>")
         elif block.startswith("### "):
             out.append(f"<h3>{inline(block[4:].strip())}</h3>")

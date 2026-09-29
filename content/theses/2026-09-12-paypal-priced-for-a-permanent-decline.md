@@ -2,6 +2,8 @@ title: PayPal Is Priced for a Permanent Decline, and You Couldn't Give the Stock
 date: 2026-09-12
 summary: A deep-value case that PayPal's "left for dead" narrative is overstated, its fastest-growing businesses are hidden inside a single-digit-to-low-double-digit multiple, and a buyback alone can nearly double EPS within a few years — with real external validation from a $53 billion buyout offer the board turned down.
 ---
+> **Update, September 28, 2026:** I've written this thesis up as a formal two-page stock pitch — **LONG, $85 price target (2030)**, ~54% upside from $55.04 (~10.7% annualized). [Read it at the bottom of this post](#pypl-pitch) or [download the PDF](/files/pypl-pitch-2026-09-28.pdf).
+
 PayPal has had one hell of a downfall, falling from grace and dropping from $308 in July 2021 all the way down to $39. Of course, the market isn't completely irrational, and there are multiple reasons behind this decline. To list a few, PayPal has faced significant competition from Apple Pay and Google Pay, losing market share and facing contracting margins. PayPal's leadership was also lacking under Alex Chriss, who spent roughly two and a half years running the company with no significant value-added changes or real initiatives. The board finally got impatient and replaced him with Enrique Lores in February 2026, and the stock cratered further on the news, down to its trough near $39.
 
 Here at Axia Research, we understand that entry price is of the utmost importance. You can buy an amazing company at a horrible price and underperform the market even though the company is changing the world. We prefer to buy good businesses at great prices, and we believe PayPal is just that. We are not delusional about the company, but we do believe it offers a significant margin of safety at its current price. Luckily, we are not alone in believing this. In July 2026, Stripe and Advent International offered to buy out PayPal's shareholders at $60.50 a share — a valuation north of $53 billion, paying a premium of roughly 28% to its market price. The deal would have been backed by approximately $50 billion in secured bank financing to buy the company outright. This is significant, because it means the lender believed PayPal's cash flow was secure enough to take on that risk. The board let the talks stall over price, and by late August the deal was dead. We believe that was the right call, because over the next 3-5 years we have a price target well above $60.50 per share. But let's go over our thesis.
@@ -84,3 +86,11 @@ If management's cost and efficiency program shows up in the numbers the way it d
 All of this is still to be proven, but our conviction grows by the day. That's why PayPal is currently our largest position, at roughly 20% of the portfolio — usually the ceiling we set for any single holding, since there are always risks we don't yet know to look for. If Mr. Market gives us the opportunity, we'll consider either adding derivatives or simply increasing the position further. As always, we're sharing our own opinions and thesis here, and this is opinion, not advice. See you in the next one.
 
 *Data as of this post: figures above are drawn from PayPal's FY2015, FY2024, and FY2025 earnings releases, PayPal's SEC filings (including the 2026 CEO performance stock unit grant), and reporting from Reuters, Bloomberg, and other financial media on the February 2026 CEO transition and the July-August 2026 Stripe/Advent acquisition talks. Peer multiples (Block, Fiserv, Global Payments, Visa, Mastercard) are trailing/forward P/E as reported by StockAnalysis.com as of this writing. Entry price, cost basis, and position size are our own trade record.*
+
+---
+
+## The full pitch (September 28, 2026)
+
+The formal version of this thesis, with updated market data as of September 25, 2026, the conservative 2030 valuation (0% growth, flat margins, zero credit for the ad business, $6B/year of buybacks) and the key risks.
+
+[[pdf src="/files/pypl-pitch-2026-09-28.pdf" title="PayPal (PYPL) Stock Pitch · LONG · PT $85 (2030)" id="pypl-pitch" pages="/images/pypl-pitch/page-1.jpg,/images/pypl-pitch/page-2.jpg"]]

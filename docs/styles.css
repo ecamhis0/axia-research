@@ -161,7 +161,7 @@ a:hover { color: var(--accent-deep); }
   font-size: 18px;
   margin-bottom: 12px;
 }
-.section-page { padding: 48px 0 64px; }
+.section-page { padding-top: 48px; padding-bottom: 64px; }
 
 /* Card grid */
 .card-grid {
@@ -210,7 +210,7 @@ a:hover { color: var(--accent-deep); }
 .empty { color: var(--ink-soft); font-family: var(--sans); }
 
 /* Post */
-.post { padding: 48px 0 72px; max-width: var(--max); }
+.post { padding-top: 48px; padding-bottom: 72px; max-width: var(--max); }
 .post-title {
   font-size: clamp(30px, 5vw, 42px);
   color: var(--navy);
@@ -302,4 +302,48 @@ a:hover { color: var(--accent-deep); }
   .hero { padding: 40px 0 32px; }
   .card-grid { grid-template-columns: 1fr; }
   .footer-row { flex-direction: column; }
+}
+
+/* Embedded PDF (pitch documents) */
+.post-body .pdf-embed {
+  margin: 28px 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--cream-card);
+  overflow: hidden;
+  scroll-margin-top: 90px;
+}
+.pdf-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+}
+.pdf-title { font-weight: 600; color: var(--navy); font-size: 15px; }
+.pdf-actions { display: flex; gap: 8px; }
+.post-body .btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border: 1px solid var(--navy);
+  border-radius: 4px;
+  color: var(--navy);
+  text-decoration: none;
+  background: transparent;
+}
+.post-body .btn:hover { background: var(--cream); color: var(--navy); }
+.post-body .btn-solid { background: var(--navy); color: var(--cream); }
+.post-body .btn-solid:hover { background: var(--navy-deep); color: var(--cream); }
+.pdf-frame { display: block; width: 100%; height: 900px; border: 0; background: #fff; }
+.pdf-pages { display: none; }
+.pdf-pages img { display: block; width: 100%; height: auto; background: #fff; border-top: 1px solid var(--rule); }
+@media (max-width: 760px) {
+  .pdf-frame { display: none; }
+  .pdf-pages { display: block; }
 }
